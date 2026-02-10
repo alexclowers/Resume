@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alex Clowers • Enterprise Change & Release Manager</title>
+  <meta name="description" content="Enterprise Change & Release Manager specializing in ITSM governance, CAB/eCAB operations, and DevOps-aligned delivery." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1b33;
+      --panel2:#0c162b;
+      --text:#e8eefc;
+      --muted:#a9b6d6;
+      --brand:#7aa7ff;
+      --brand2:#6cf0c2;
+      --border:rgba(255,255,255,.10);
+      --shadow:0 18px 55px rgba(0,0,0,.45);
+      --radius:18px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 700px at 10% 0%, rgba(122,167,255,.18), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(108,240,194,.12), transparent 55%),
+        radial-gradient(800px 600px at 50% 100%, rgba(122,167,255,.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 70px}
+    .nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(12px);
+      background: linear-gradient(to bottom, rgba(11,18,32,.88), rgba(11,18,32,.55));
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{max-width:var(--max);margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:.2px}
+    .dot{width:12px;height:12px;border-radius:999px;background: linear-gradient(135deg, var(--brand), var(--brand2));box-shadow:0 0 0 4px rgba(122,167,255,.14);}
+    .links{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+    .links a{text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:12px;border:1px solid transparent}
+    .links a:hover{color:var(--text);border-color:var(--border);background:rgba(255,255,255,.04)}
+
+    .card{background: linear-gradient(180deg, rgba(15,27,51,.85), rgba(12,22,43,.85));
+      border:1px solid var(--border);border-radius:var(--radius);box-shadow: var(--shadow);overflow:hidden}
+    .pad{padding:22px}
+    .hero{margin-top:28px;display:grid;grid-template-columns: 1.2fr .8fr;gap:18px;align-items:stretch}
+    @media (max-width: 920px){.hero{grid-template-columns:1fr}}
+    h1{margin:12px 0 10px;font-size: clamp(30px, 4.2vw, 48px);line-height:1.08;letter-spacing:-.6px}
+    h2{margin:0 0 10px;font-size:20px}
+    h3{margin:0 0 6px;font-size:16px}
+    .muted{color:var(--muted)}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);
+      border:1px solid var(--border);padding:7px 10px;border-radius:999px;background: rgba(255,255,255,.03);}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;padding:10px 14px;
+      border-radius:14px;border:1px solid var(--border);background: rgba(255,255,255,.04);color:var(--text);font-weight:700;}
+    .btn:hover{background: rgba(255,255,255,.07)}
+    .btn.primary{border-color: rgba(122,167,255,.35);
+      background: linear-gradient(135deg, rgba(122,167,255,.20), rgba(108,240,194,.12));}
+    .btn.primary:hover{filter:brightness(1.07)}
+    .kpi{display:grid;grid-template-columns: repeat(2, 1fr);gap:12px;margin-top:12px}
+    .k{padding:16px;border-radius:16px;border:1px solid var(--border);background: rgba(255,255,255,.03);}
+    .k .big{font-size:22px;font-weight:900;letter-spacing:-.4px}
+    .k .lbl{color:var(--muted);font-size:12px;margin-top:4px}
+    .grid3{display:grid;grid-template-columns: repeat(3, 1fr);gap:12px}
+    @media (max-width: 920px){.grid3{grid-template-columns:1fr}}
+    .tile{padding:16px;border-radius:16px;border:1px solid var(--border);background: rgba(255,255,255,.03);}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .pill{font-size:12px;color:var(--muted);border:1px solid var(--border);padding:6px 10px;border-radius:999px;background: rgba(255,255,255,.02);}
+    .timeline{display:grid;gap:12px}
+    .role{padding:16px;border-radius:16px;border:1px solid var(--border);background: rgba(255,255,255,.03);}
+    .role .meta{color:var(--muted);font-size:13px;margin-top:2px}
+    ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    li{margin:8px 0}
+    .footer{margin-top:26px;color:var(--muted);font-size:13px;display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between}
+    .footer a{color:var(--muted);text-decoration:none;border-bottom:1px dashed rgba(169,182,214,.35)}
+    .footer a:hover{color:var(--text);border-bottom-color:rgba(232,238,252,.55)}
+    .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{left:18px;top:18px;width:auto;height:auto;z-index:999;background:#111b2f;border:1px solid var(--border);
+      padding:10px 12px;border-radius:12px;}
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Alex Clowers</span>
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="wrap">
+    <section class="hero" id="top">
+      <div class="card">
+        <div class="pad">
+          <span class="eyebrow"><b style="color:var(--text)">Release & Program Manager</b> • ITSM • DevOps Governance</span>
+          <h1>Governed change that ships fast—without breaking production.</h1>
+          <p class="muted" style="max-width:64ch;margin:0;">
+            Release & Program Manager with 10+ years of experience managing enterprise-scale releases across DevOps, infrastructure,
+            and application environments—building CAB/eCAB governance, audit-ready controls, and CI/CD-aligned processes.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="resume.pdf" download>Download Resume (PDF)</a>
+            <a class="btn" href="mailto:alex.clowers@gmail.com">Email Me</a>
+            <a class="btn" href="https://www.linkedin.com/in/alex-clowers" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+
+          <div class="pill-row" aria-label="Highlights">
+            <span class="pill">CAB / eCAB Facilitation</span>
+            <span class="pill">Risk Tiers (Major / Significant / Minor / Emergency)</span>
+            <span class="pill">ServiceNow • Azure DevOps • Jira</span>
+            <span class="pill">Regulatory & Audit Readiness</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div class="pad">
+          <h2>Impact highlights</h2>
+          <p class="muted" style="margin-top:0;">Metrics and outcomes pulled from your resume.</p>
+          <div class="kpi">
+            <div class="k">
+              <div class="big">56% → 98%</div>
+              <div class="lbl">Change success improvement (IBM)</div>
+            </div>
+            <div class="k">
+              <div class="big">75%</div>
+              <div class="lbl">Reduction in P1 incidents (Caesars)</div>
+            </div>
+            <div class="k">
+              <div class="big">3× / week</div>
+              <div class="lbl">CAB cadence created (Caesars)</div>
+            </div>
+            <div class="k">
+              <div class="big">10+ yrs</div>
+              <div class="lbl">Enterprise release + governance</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="card" style="margin-top:18px;">
+      <div class="pad">
+        <h2>About</h2>
+        <div class="grid3">
+          <div class="tile">
+            <h3>Governance that enables delivery</h3>
+            <p class="muted" style="margin:0;">I embed practical controls into delivery so teams can move fast without taking on hidden risk.</p>
+          </div>
+          <div class="tile">
+            <h3>Audit-ready, evidence-based change</h3>
+            <p class="muted" style="margin:0;">Policies, artifacts, and approvals structured to meet regulatory and audit requirements.</p>
+          </div>
+          <div class="tile">
+            <h3>Clear communication across teams</h3>
+            <p class="muted" style="margin:0;">I bridge stakeholders, engineering, and PMs to align dependencies, windows, and go/no-go decisions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="card" style="margin-top:18px;">
+      <div class="pad">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="role">
+            <h3>IT Consultant / Enterprise Change & Release Manager</h3>
+            <div class="meta">APG Technology • Mar 2020 – Present</div>
+            <ul>
+              <li>Standardized release schedules from inception through deployment, coordinating cross-functional delivery and QA readiness.</li>
+              <li>Planned CI/CD-aligned release governance across Agile/ITIL methods and SDLC lifecycle.</li>
+              <li>Created dashboards to capture outcomes and report release performance to stakeholders.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h3>Enterprise Change & Release Manager</h3>
+            <div class="meta">Caesars Entertainment • Feb 2021 – Nov 2025</div>
+            <ul>
+              <li>Revamped change governance aligned to ITSM policies; built CAB (3× weekly) and tightened eCAB for break/fix.</li>
+              <li>Made pre-production testing mandatory when environments were available; introduced post-deployment testing with stakeholder signoff.</li>
+              <li>Reduced P1 incidents due to failed deployments by 75% by enforcing accountability, risk alignment, and PIR-driven improvements.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h3>Enterprise Change & Release Manager</h3>
+            <div class="meta">IBM (Watson Media) • Oct 2015 – Mar 2020</div>
+            <ul>
+              <li>Managed enterprise releases for subscription-based media sites and live programming.</li>
+              <li>Directed Jira → ServiceNow migration; supported datacenter → AWS migrations with risk controls and approvals.</li>
+              <li>Improved change success rate from 56% to 98% within 8 months through process redesign and SAFe/SDLC alignment.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h3>Project Manager, IT Support</h3>
+            <div class="meta">IPswitch • Oct 2013 – Oct 2015</div>
+            <ul>
+              <li>Led weekly release meetings to ensure tickets had technical documentation, testing readiness, and scheduling for CAB approval.</li>
+              <li>Managed requirements and testing for new product development with DevOps and senior management.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="card" style="margin-top:18px;">
+      <div class="pad">
+        <h2>Skills & tools</h2>
+        <div class="pill-row">
+          <span class="pill">ServiceNow Change</span>
+          <span class="pill">Azure DevOps</span>
+          <span class="pill">Jira (Admin)</span>
+          <span class="pill">ITIL / ITSM</span>
+          <span class="pill">SAFe / Agile</span>
+          <span class="pill">SDLC</span>
+          <span class="pill">CI/CD Governance</span>
+          <span class="pill">Risk & Impact</span>
+          <span class="pill">Change Calendar</span>
+          <span class="pill">PIR / RCA</span>
+          <span class="pill">Observability / Deployment Monitoring</span>
+          <span class="pill">AWS • Azure</span>
+        </div>
+        <p class="muted" style="margin:12px 0 0;">(You can swap/add tools easily by editing the “pill” list above.)</p>
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:18px;">
+      <div class="pad">
+        <h2>Contact</h2>
+        <p class="muted" style="margin:0 0 10px;">Best ways to reach me:</p>
+        <ul>
+          <li>Email: <a href="mailto:alex.clowers@gmail.com">alex.clowers@gmail.com</a></li>
+          <li>Phone: <a href="tel:4047599035">4047599035</a></li>
+          <li>Location: Atlanta, GA, 30340</li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/alex-clowers" target="_blank" rel="noreferrer">www.linkedin.com/in/alex-clowers</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="year"></span> Alex Clowers</div>
+      <div>
+        <a href="resume.pdf" download>Resume PDF</a>
+        <span class="muted"> • </span>
+        <a href="mailto:alex.clowers@gmail.com">Email</a>
+        <span class="muted"> • </span>
+        <a href="https://www.linkedin.com/in/alex-clowers" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
